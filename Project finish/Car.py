@@ -102,7 +102,12 @@ class Car:
                             self.home[1] += steps
                             self.map[self.home[0]][self.home[1]] = "*"
                             for i in self.map:
-                                print(*i)
+                                for y in i:
+                                    if y == 1:
+                                        print(f'\033[38;5;27m{y}\033[0;0m', end=" ")
+                                    else:
+                                        print(y, end=" ")
+                                print()
                             print("right end")
                         else:
                             print("На пути препятствие!!!")
@@ -136,7 +141,12 @@ class Car:
                             self.home[0] += steps
                             self.map[self.home[0]][self.home[1]] = "*"
                             for i in self.map:
-                                print(*i)
+                                for y in i:
+                                    if y == 1:
+                                        print(f'\033[38;5;27m{y}\033[0;0m', end=" ")
+                                    else:
+                                        print(y, end=" ")
+                                print()
                             print("down end")
                         else:
                             print("на пути препятствие")
@@ -168,7 +178,12 @@ class Car:
                             self.home[0] = self.home[0] - steps
                             self.map[self.home[0]][self.home[1]] = "*"
                             for i in self.map:
-                                print(*i)
+                                for y in i:
+                                    if y == 1:
+                                        print(f'\033[38;5;27m{y}\033[0;0m', end=" ")
+                                    else:
+                                        print(y, end=" ")
+                                print()
                             print("down end")
                         else:
                             print("на пути препятствие")
@@ -203,7 +218,12 @@ class Car:
                             self.home[1] = self.home[1] - steps
                             self.map[self.home[0]][self.home[1]] = "*"
                             for i in self.map:
-                                print(*i)
+                                for y in i:
+                                    if y == 1:
+                                        print(f'\033[38;5;27m{y}\033[0;0m', end=" ")
+                                    else:
+                                        print(y, end=" ")
+                                print()
                             print("left end")
                         else:
                             print("На пути препятствие!!!")
