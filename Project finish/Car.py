@@ -218,7 +218,12 @@ class Car:
 car = Car()
 print(car.cities())
 for i in car.choose_city("Moscow"):
-    print(*i)
+    for y in i:
+        if y == 1:
+            print(f'\033[38;5;27m{y}\033[0;0m',end=" ")
+        else:
+            print(y,end=" ")
+    print()
 print(car.home)
 car.open_close()
 car.start()
